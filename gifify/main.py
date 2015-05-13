@@ -33,7 +33,7 @@ def recreate_image(codebook, labels, w, h):
 image = cv2.imread(file)
 image = np.array(image, dtype=np.float64) / 255
 
-w, h, d = original_shape = tuple(image.shape)
+w, h, d = tuple(image.shape)
 image_array = np.reshape(image, (w * h, d))
 
 print('# Apprentissage par la méthode des K plus proches voisins')
